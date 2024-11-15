@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block body %}
+this is contact block  body
+<div class="container">
+    <img src="https://images.unsplash.com/photo-1488998427799-e3362cec87c3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" height="400" width="1000">
+<h1 class="text-center">Contact Us</h1>
+<form method="post" action="/contact">
+    {% csrf_token %}
+<div class=" class-center px-5 my-2">
+<div class="mb-3 row">
+    <label for="name" class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" id="name" name="name" placeholder="first and last letteer">
+    </div>
+</div>
+    <div class="mb-3 row">
+    <label for="email" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="password" class="col-sm-2 col-form-label">phone</label>
+    <div class="col-sm-10">
+      <input type="phone" class="form-control" id="password" name="password">
+    </div>
+  </div>
+  <div class="mb-3 row">
+  <label for="item" class="col-sm-2 col-form-label">itemription</label>
+  <textarea class="form-control" id="item" name="item" rows='3' placeholder="enter description" > </textarea>
+  </div>
+  </select>
+  <button class="btn btn-primary " type="submit">submit</button>
+</div>
+</div>
+</form>
+</div>
+
+
+
+
+
+{% endblock body %}
+{% block title %} contact {% endblock title %}
